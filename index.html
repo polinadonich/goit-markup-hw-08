@@ -27,7 +27,9 @@
             <span class="logo__text_accept-color">Web</span
             ><span class="logo__text">Studio</span>
           </a>
-          <button type="button" class="site-header__menu-btn">
+          <button type="button" class="site-header__menu-btn is-open"
+          aria-expanded="false" 
+          data-menu-button>
             <svg
               width="40"
               height="40"
@@ -43,7 +45,9 @@
               ></use>
             </svg>
           </button>
-          <!-- <ul class="site-nav">
+
+          <div class="menu-container is-open" id="menu-container" data menu>
+            <!-- <ul class="site-nav">
             <li class="site-nav__item">
               <a
                 href="index.html"
@@ -78,8 +82,11 @@
               +38 096 111 11 11</a
             >
           </li>
-        </ul>
-      </div> -->
+        </ul> -->
+      </div>
+
+          </div>
+          
     </header>
 
     <main>
@@ -680,5 +687,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -76,6 +76,14 @@ img {
   display: none;
 }
 
+.site-header__menu-btn.is-open .site-header__nav_icon-close {
+  display: block;
+}
+
+.site-header__menu-btn.is-open .site-header__nav_icon-menu {
+  display: none;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
   letter-spacing: 0.03em;
