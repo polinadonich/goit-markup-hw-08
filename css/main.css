@@ -54,6 +54,7 @@ img {
 }
 
 .site-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
@@ -72,15 +73,15 @@ img {
   background-color: transparent;
 }
 
-.site-header__menu-btn .site-header__nav_icon-close {
+.site-header__menu-btn .site-header__nav_icon-menu {
   display: none;
 }
 
-.site-header__menu-btn.is-open .site-header__nav_icon-close {
+.site-header__menu-btn.is-open .site-header__nav_icon-menu {
   display: block;
 }
 
-.site-header__menu-btn.is-open .site-header__nav_icon-menu {
+.site-header__menu-btn.is-open .site-header__nav_icon-close {
   display: none;
 }
 

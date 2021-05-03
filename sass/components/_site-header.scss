@@ -16,22 +16,22 @@
   border: none;
   background-color: transparent;
 }
-.site-header__menu-btn .site-header__nav_icon-close {
+.site-header__menu-btn .site-header__nav_icon-menu {
   display: none;
-}
-
-.site-header__menu-btn.is-open .site-header__nav_icon-close {
-  display: block;
 }
 
 .site-header__menu-btn.is-open .site-header__nav_icon-menu {
+  display: block;
+}
+
+.site-header__menu-btn.is-open .site-header__nav_icon-close {
   display: none;
 }
 
-.menu-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 796px;
-}
+// .menu-container {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   width: 100%;
+//   height: 796px;
+// }
