@@ -1,0 +1,22 @@
+.logo {
+  font-family: $logo-font-family;
+  letter-spacing: 0.03em;
+  font-size: 26px;
+  line-height: 1.19;
+  padding-left: 0px;
+
+  &__text_accept-color {
+    color: $accept-color;
+  }
+
+  &__text {
+    color: $primery-text-color;
+  }
+
+  &__text_white {
+    color: $primery-bg-color;
+    letter-spacing: 0.03em;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
