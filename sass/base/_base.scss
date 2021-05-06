@@ -28,13 +28,11 @@
 }
 
 .section__title {
-  color: $primery-text-color;
-  letter-spacing: 0.03em;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
   text-align: center;
-  text-transform: uppercase;
+  color: $primery-text-color;
 }
 
 ul {

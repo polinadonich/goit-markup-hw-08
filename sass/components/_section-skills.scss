@@ -1,26 +1,34 @@
 .section-skills {
   padding-top: 0px;
 
-  &__images {
-    // display: flex;
-    // justify-content: space-between;
-    // margin: 0px;
+  @media screen and (max-width: $tablet-max) {
+    display: none;
   }
+}
+.section-skills__images {
+  display: flex;
+  margin: -15px;
+}
 
-  &__card {
-    position: relative;
-  }
-  &__description {
-    background: rgba(47, 48, 58, 0.8);
-    padding: 27px 82px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $primery-bg-color;
-    position: absolute;
-    bottom: 0;
-  }
+.section-skills__card {
+  position: relative;
+  margin: 15px;
+  width: 370px;
+}
+.section-skills__description {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.section-skills__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primery-bg-color;
 }
