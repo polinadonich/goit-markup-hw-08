@@ -9,15 +9,16 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: $mobile) {
+    width: $mobile;
   }
 
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
   }
 }
 
@@ -30,11 +31,10 @@
   color: $primery-text-color;
   letter-spacing: 0.03em;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 14px;
+  line-height: 1.14;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 ul {
