@@ -285,6 +285,7 @@ img {
   height: 120px;
   margin-bottom: 30px;
   display: flex;
+  align-items: center;
   justify-content: center;
   background: #f5f4fa;
 }
@@ -319,6 +320,7 @@ img {
   position: absolute;
   bottom: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 70px;
@@ -335,6 +337,10 @@ img {
 
 .section-team {
   background-color: #f5f4fa;
+}
+
+.team-cards__name {
+  padding: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -368,10 +374,6 @@ img {
   .team-cards__item {
     flex-basis: calc((100% - 8 * 15px) / 4);
   }
-}
-
-.team-cards__name {
-  padding: 30px;
 }
 
 .team-cards__title {

@@ -2,6 +2,10 @@
   background-color: $bg-color;
 }
 
+.team-cards__name {
+  padding: 30px;
+}
+
 .team-cards {
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -29,10 +33,6 @@
   @media screen and (min-width: $desktop) {
     flex-basis: calc((100% - 8 * 15px) / 4);
   }
-}
-
-.team-cards__name {
-  padding: 30px;
 }
 
 .team-cards__title {
