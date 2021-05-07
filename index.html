@@ -210,11 +210,34 @@
 
           <ul class="team-cards">
             <li class="team-cards__item">
-              <img
-                src="images/img4.jpg"
-                width="270"
-                alt="фото product designer"
-              />
+               <picture class="team-cards__photo">
+                <source
+                  srcset="
+                  ./images/team-cards/mobile-product-designer-450.jpg  1x,
+                  ./images/team-cards/mobile-product-designer@2x.jpg 2x
+                  "
+
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/tablet-product-designer-354.jpg  1x,
+                    ./images/team-cards/tablet-product-designer@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/desktop-product-designer-270.jpg  1x,
+                    ./images/team-cards/desktop-product-designer@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./team-cards/desktop-product-designer-270.jpg"
+                  alt="фото product designer"
+                />
+          
               <div class="team-cards__name">
                 <h3 class="team-cards__title">Игорь Демьяненко</h3>
                 <p class="team-cards__text">Product Designer</p>
