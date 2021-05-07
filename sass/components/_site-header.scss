@@ -1,14 +1,17 @@
 .site-header {
-  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .site-header__nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 60px;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
+
 .site-header__menu-btn {
   display: inline-flex;
   margin: 0;

@@ -1,8 +1,18 @@
 .contact-nav {
-  padding: 0px;
-  margin: 0px;
-  display: flex;
-  align-items: center;
+  margin-left: auto;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    text-align: center;
+  }
 
   &__link {
     color: $title-text-color;
