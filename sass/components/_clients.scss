@@ -1,17 +1,30 @@
 .clients {
-  // display: flex;
-  // margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: -15px;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+    margin: 15px;
+
+    @media screen and (max-width: $tablet) {
+      width: calc((100% - 2 * 30px) / 2);
+    }
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 6 * 30px) / 6);
+    }
   }
+
   &__link {
-    width: 170px;
-    height: 90px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
     display: flex;
     align-items: center;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
     justify-content: center;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
