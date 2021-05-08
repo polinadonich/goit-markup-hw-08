@@ -348,6 +348,14 @@ img {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 768px) {
+  .feature__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 .feature__title {
   text-align: center;
   letter-spacing: 0.03em;
