@@ -295,11 +295,34 @@
             </li>
 
             <li class="team-cards__item">
-              <img
-                src="images/img5.jpg"
-                width="270"
-                alt="фото frontend developer"
-              />
+              <picture class="team-cards__photo">
+                <source
+                  srcset="
+                  ./images/team-cards/mobile-frontend-450.jpg  1x,
+                  ./images/team-cards/mobile-frontend@2x.jpg 2x
+                  "
+
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/tablet-frontend-354.jpg  1x,
+                    ./images/team-cards/tablet-frontend@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/desktop-frontend-270.jpg  1x,
+                    ./images/team-cards/desktop-frontend@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./team-cards/desktop-frontend-270.jpg"
+                  alt="фото frontend developer"
+                />
+          
               <div class="team-cards__name">
                 <h3 class="team-cards__title">Ольга Репина</h3>
                 <p class="team-cards__text">Frontend Developer</p>
@@ -356,7 +379,33 @@
             </li>
 
             <li class="team-cards__item">
-              <img src="images/img6.jpg" width="270" alt="фото marketing" />
+               <picture class="team-cards__photo">
+                <source
+                  srcset="
+                  ./images/team-cards/mobile-marketing-450.jpg  1x,
+                  ./images/team-cards/mobile-marketing@2x.jpg 2x
+                  "
+
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/tablet-marketing-354.jpg  1x,
+                    ./images/team-cards/tablet-marketing@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/desktop-marketing-270.jpg  1x,
+                    ./images/team-cards/desktop-marketing@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./team-cards/desktop-marketing-270.jpg"
+                  alt="фото marketing"
+                />
               <div class="team-cards__name">
                 <h3 class="team-cards__title">Николай Тарасов</h3>
                 <p class="team-cards__text">Marketing</p>
@@ -413,7 +462,33 @@
             </li>
 
             <li class="team-cards__item">
-              <img src="images/img7.jpg" width="270" alt="фото ui designer" />
+               <picture class="team-cards__photo">
+                <source
+                  srcset="
+                  ./images/team-cards/mobile-ui-450.jpg  1x,
+                  ./images/team-cards/mobile-ui@2x.jpg 2x
+                  "
+
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/tablet-ui-354.jpg  1x,
+                    ./images/team-cards/tablet-ui@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-cards/desktop-ui-270.jpg  1x,
+                    ./images/team-cards/desktop-ui@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./team-cards/desktop-ui-270.jpg"
+                  alt="фото ui designer"
+                />
               <div class="team-cards__name">
                 <h3 class="team-cards__title">Михаил Ермаков</h3>
                 <p class="team-cards__text">UI Designer</p>
