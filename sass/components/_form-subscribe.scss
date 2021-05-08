@@ -1,53 +1,46 @@
-.form-subscribe {
-  // display: flex;
-  // margin-top: 20px;
-
-  &:focus {
-    color: $accept-color;
+.footer__subscribe-thumb {
+  @media screen and (min-width: $tablet) {
+    min-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  &__submit-email {
-    display: flex;
-    align-items: center;
-    min-width: 200px;
-    height: 50px;
-
-    color: $primery-bg-color;
-    background-color: $accept-color;
-    letter-spacing: 0.06em;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
-    font-weight: 700;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 13px 29px;
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
-
-  &__icon-send {
-    margin-left: 10px;
-    fill: #fff;
-  }
-
-  &__wrapper {
-    position: relative;
+  @media screen and (min-width: $desktop) {
+    margin: 0;
   }
 }
 
+.form-subscribe {
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.form-subscribe :focus {
+  color: $accept-color;
+}
+
+.form-subscribe__icon-send {
+  margin-left: 10px;
+  fill: #fff;
+}
+
 .form-subscribe__send-email {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 10px;
-  background-color: $accept-bg-color;
+  padding: 15px 16px;
+  cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding-left: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
+  background-color: $accept-bg-color;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
 
   &::placeholder {
     font-weight: 400;
@@ -56,5 +49,27 @@
 
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+}
+.form-subscribe__submit-email {
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: 0;
+  color: $primery-bg-color;
+  background-color: $accept-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin-top: 20px;
+  padding: 10px 28px;
+  display: inline-flex;
+
+  @media screen and (min-width: $desktop) {
+    margin: 0 0 0 12px;
   }
 }
