@@ -28,6 +28,7 @@
 
   &__direction {
     padding: 20px 24px;
+    flex-grow: 1;
     border-left: $border-card-content;
     border-right: $border-card-content;
     border-bottom: $border-card-content;
