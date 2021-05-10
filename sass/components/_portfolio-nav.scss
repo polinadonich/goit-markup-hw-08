@@ -1,33 +1,44 @@
 .portfolio-nav {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
-  margin-top: 0px;
+  flex-wrap: wrap;
 
-  &__button {
-    color: $primery-bg-color;
-    background-color: $accept-color;
-    letter-spacing: 0.06em;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
-    font-weight: 700;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 6px 22px;
-    border: 0px;
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: $tablet) {
   }
 
-  &__item {
-    margin-left: 8px;
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
   }
+}
 
-  &__item:first-child {
-    margin-left: 0px;
+.portfolio-nav__item:not(:nth-last-child(-n + 2)) {
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 15px;
   }
+}
+
+.portfolio-nav__item {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.portfolio-nav__button {
+  color: $primery-bg-color;
+  background-color: $accept-color;
+  letter-spacing: 0.06em;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 0px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-nav .portfolio-nav__button {
