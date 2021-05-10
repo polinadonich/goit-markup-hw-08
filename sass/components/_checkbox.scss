@@ -1,8 +1,6 @@
 .checkbox {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
 
   &__link {
     color: $accept-color;
@@ -44,9 +42,9 @@
   }
 
   &__text {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    margin-left: 24px;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $title-text-color;
   }

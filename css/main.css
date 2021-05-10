@@ -115,58 +115,6 @@ img {
   }
 }
 
-.site-header__menu-btn {
-  display: inline-flex;
-  position: absolute;
-  border: none;
-  z-index: 4;
-  top: 10px;
-  right: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .site-header__menu-btn {
-    display: none;
-  }
-}
-
-.site-header__menu-btn .site-header__nav_icon-menu {
-  display: none;
-}
-
-.site-header__menu-btn.is-open .site-header__nav_icon-menu {
-  display: block;
-}
-
-.site-header__menu-btn.is-open .site-header__nav_icon-close {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .menu-container {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 48px 40px;
-  }
-  .menu-container.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    z-index: 3;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .menu-container {
-    display: none;
-  }
-}
-
 .site-header__nav {
   display: flex;
   align-items: center;
@@ -305,6 +253,150 @@ img {
   .contact-nav__icon {
     margin-right: 10px;
   }
+}
+
+.site-header__menu-btn {
+  display: inline-flex;
+  position: absolute;
+  z-index: 4;
+  top: 10px;
+  right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header__menu-btn {
+    display: none;
+  }
+}
+
+.site-header__menu-btn .site-header__nav_icon-menu {
+  display: none;
+}
+
+.site-header__menu-btn.is-open .site-header__nav_icon-menu {
+  display: block;
+}
+
+.site-header__menu-btn.is-open .site-header__nav_icon-close {
+  display: none;
+}
+
+.menu-container {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 48px 40px;
+  }
+  .menu-container .menu-container.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+.site-header__nav_icon:hover, .site-header__nav_icon:focus {
+  fill: #2196f3;
+}
+
+.mobile-menu__nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__nav-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-menu__nav-link:hover, .mobile-menu__nav-link:focus {
+  color: #2196f3;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-menu__nav-link {
+    font-size: 20px;
+  }
+}
+
+.mobile-menu__nav-link-is-active {
+  color: #2196f3;
+}
+
+.mobile-menu__contact-item-tel {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__contact-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-menu__contact-tel {
+    font-size: 17px;
+  }
+}
+
+.mobile-menu__contact-item-mail {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__contact-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-menu__contact-mail {
+    font-size: 12px;
+  }
+}
+
+.mobile-menu__social-link-list {
+  display: flex;
+  padding: 0;
+}
+
+.mobile-menu__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-menu__social-link {
+    font-size: 9px;
+  }
+}
+
+.mobile-menu__social-link-separator {
+  margin: 0 10px;
 }
 
 .site-hero {
@@ -967,7 +1059,8 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -979,14 +1072,16 @@ img {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -994,12 +1089,21 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__content {
-  padding: 40px;
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__header {
-  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1035,21 +1139,15 @@ img {
 
 .modal__btn-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   display: flex;
-  height: 38px;
-  padding: 0;
-  background-color: #ffffff;
-  border: none;
-}
-
-.modal__btn-close_bgr {
-  position: relative;
-  margin-top: 8px;
-  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
+  background-color: #ffffff;
+  border: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #ffffff;
@@ -1072,7 +1170,18 @@ img {
   flex-direction: column;
 }
 
+.modal-form__field {
+  position: relative;
+  display: block;
+}
+
 .modal-form__label-text {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   color: #757575;
 }
 
@@ -1120,8 +1229,6 @@ img {
 .checkbox {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
 }
 
 .checkbox__link {
@@ -1169,9 +1276,9 @@ img {
 }
 
 .checkbox__text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  margin-left: 24px;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
 }
