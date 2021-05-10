@@ -1,15 +1,16 @@
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
-  margin-bottom: 0px;
+  margin: -15px;
 
   &__card {
     position: relative;
     overflow: hidden;
   }
   &__overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -51,13 +52,20 @@
   }
 }
 .portfolio__item {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
   background: $primery-bg-color;
   box-sizing: border-box;
-  width: 370px;
-  padding: 0;
-  margin-left: $portfolio-box-gap;
-  margin-top: $portfolio-box-gap;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
