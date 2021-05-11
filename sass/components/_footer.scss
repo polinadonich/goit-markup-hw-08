@@ -43,7 +43,6 @@
   .footer-contaсt__address {
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 60px;
     font-style: normal;
     color: $primery-bg-color;
   }
@@ -56,6 +55,10 @@
     letter-spacing: 0.03em;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  .footer-contaсt__list {
+    margin: 0;
   }
 
   .footer-contaсt__item:last-child {

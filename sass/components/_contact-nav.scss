@@ -14,10 +14,6 @@
     text-align: center;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 50px;
-  }
-
   &__link:hover &__icon,
   &__link:focus &__icon {
     fill: $accept-color;
