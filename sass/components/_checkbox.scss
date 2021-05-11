@@ -1,13 +1,15 @@
 .checkbox {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 
   &__link {
     color: $accept-color;
     text-decoration: underline;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
   }
   &__hidden {
@@ -42,9 +44,9 @@
   }
 
   &__text {
-    margin-left: 24px;
+    font-weight: normal;
     font-size: 12px;
-    line-height: 1.17;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     color: $title-text-color;
   }

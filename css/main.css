@@ -1083,8 +1083,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  z-index: 5;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -1096,16 +1095,14 @@ img {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
+  width: 450px;
+  height: 609px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1113,21 +1110,12 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 480px) {
-  .modal {
-    width: 450px;
-    height: 609px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal {
-    width: 528px;
-    height: 581px;
-  }
+.modal__content {
+  padding: 40px;
 }
 
 .modal__header {
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1163,15 +1151,21 @@ img {
 
 .modal__btn-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0;
+  right: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
+  height: 38px;
+  padding: 0;
   background-color: #ffffff;
   border: none;
+}
+
+.modal__btn-close_bgr {
+  position: relative;
+  margin-top: 8px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #ffffff;
@@ -1190,23 +1184,13 @@ img {
 }
 
 .modal-form {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.modal-form__field {
-  position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-form__label-text {
-  position: absolute;
-  top: -18px;
-  left: 0;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
   color: #757575;
+  font-size: 14px;
 }
 
 .modal-form label:not(:last-child) {
@@ -1253,14 +1237,16 @@ img {
 .checkbox {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .checkbox__link {
   color: #2196f3;
   text-decoration: underline;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
 }
 
@@ -1300,9 +1286,9 @@ img {
 }
 
 .checkbox__text {
-  margin-left: 24px;
+  font-weight: normal;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
 }

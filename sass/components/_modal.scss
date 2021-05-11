@@ -6,10 +6,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  z-index: 5;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.is-hidden {
     opacity: 0;
@@ -21,7 +18,6 @@
 
   &.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.9);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -31,19 +27,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
 
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-    height: 609px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 528px;
-    height: 581px;
-  }
-  padding: 40px;
+  width: 450px;
+  height: 609px;
   background-color: $primery-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -51,7 +37,12 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  &__content {
+    padding: 40px;
+  }
+
   &__header {
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -92,20 +83,25 @@
 
 .modal__btn-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0;
+  right: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
+  height: 38px;
+  padding: 0;
 
   background-color: $primery-bg-color;
   border: none;
 
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background-color: $primery-bg-color;
+  &_bgr {
+    position: relative;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: $primery-bg-color;
+  }
 
   &_icon {
     position: absolute;
@@ -124,22 +120,12 @@
 // .modal-form
 
 .modal-form {
-  margin-top: 30px;
-  margin-bottom: 20px;
-
-  &__field {
-    position: relative;
-    display: block;
-  }
+  display: flex;
+  flex-direction: column;
 
   &__label-text {
-    position: absolute;
-    top: -18px;
-    left: 0;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
     color: $title-text-color;
+    font-size: 14px;
   }
 
   & label:not(:last-child) {
