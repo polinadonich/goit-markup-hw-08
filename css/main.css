@@ -1009,10 +1009,6 @@ img {
   }
 }
 
-.form-subscribe :focus {
-  color: #2196f3;
-}
-
 .form-subscribe__icon-send {
   margin-left: 10px;
   fill: #fff;
