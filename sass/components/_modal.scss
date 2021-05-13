@@ -48,6 +48,12 @@
     width: 450px;
     height: 609px;
   }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
+
   &__content {
     padding: 40px;
   }

@@ -1115,6 +1115,13 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+
 .modal__content {
   padding: 40px;
 }
